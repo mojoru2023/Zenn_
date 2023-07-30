@@ -48,6 +48,7 @@ def exec(topicurl):
 
     ret = use_selenium_request(first_url)
     element = etree.HTML(ret)
+    time.sleep(1)
 
     article_nums = element.xpath('//*[@id="__next"]/header[2]/div/nav/a[1]/span/text()')
     article_title = element.xpath('//*[@id="__next"]/div[1]/div/section/div[2]/div/div/article/div/a/h2/text()')
@@ -97,7 +98,7 @@ def main(argv):
         print("\n")
         print("\n")
         print("\n")
-        print("python3 Zenn_.py -t python")
+        print("python3 Zenn_s.py -t python")
         print("\n")
         print("\n")
         print("\n")
